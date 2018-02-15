@@ -23,7 +23,7 @@ public class HomeFragment extends Fragment implements BaseSliderView.OnSliderCli
 
     android.support.v7.widget.Toolbar toolbarWidget;
     SliderLayout sliderLayout;
-    
+
     // cek GIT
 
     HashMap<String, String> HashMapForURL;
