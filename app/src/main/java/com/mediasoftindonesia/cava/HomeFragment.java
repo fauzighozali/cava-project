@@ -25,6 +25,7 @@ public class HomeFragment extends Fragment implements BaseSliderView.OnSliderCli
     SliderLayout sliderLayout;
 
     // cek GIT
+    // cek DEVELOP
 
     HashMap<String, String> HashMapForURL;
     HashMap<String, Integer> HashMapForLocalRes;
