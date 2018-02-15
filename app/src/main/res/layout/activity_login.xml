@@ -150,7 +150,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="58dp"
+        android:layout_marginStart="63dp"
         android:layout_marginTop="8dp"
         android:text="Don't have an account?"
         android:textSize="6pt"
