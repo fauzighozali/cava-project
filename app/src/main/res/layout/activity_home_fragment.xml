@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mediasoftindonesia.cava.HomeFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/white_grey_bottom"
+        android:titleTextColor="#ffffffff"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/MyActionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/field_search"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="15dp">
+
+            <ImageView
+                android:id="@+id/button_search_home_top"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/button_search_top_home"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/search_vendor_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search Vendors"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="42dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_cava_c"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.daimajia.slider.library.SliderLayout
+        android:id="@+id/slider"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+        <View
+            android:id="@+id/anchor"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:minHeight="150dp" />
+        <com.daimajia.slider.library.Indicators.PagerIndicator
+            android:id="@+id/custom_indicator"
+            style="@style/AndroidImageSlider_Magnifier_Oval_Black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp" />
+    </com.daimajia.slider.library.SliderLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentTop="true"
+        android:clipToPadding="true"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider">
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/csLayoutScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.constraint.Guideline
+                android:id="@+id/v_guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.04" />
+            <android.support.constraint.Guideline
+                android:id="@+id/v_guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.94" />
+            <android.support.constraint.Guideline
+                android:id="@+id/h_guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.00" />
+            <ImageView
+                android:id="@+id/woImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/wo"
+                app:layout_constraintEnd_toStartOf="@+id/v_guideline2"
+                app:layout_constraintTop_toTopOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/mcImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/mc"
+                app:layout_constraintStart_toStartOf="@+id/v_guideline1"
+                app:layout_constraintTop_toTopOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/eoImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/eo"
+                app:layout_constraintEnd_toStartOf="@+id/woImage"
+                app:layout_constraintStart_toEndOf="@+id/mcImage"
+                app:layout_constraintTop_toTopOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/muImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="110dp"
+                android:src="@drawable/mua"
+                app:layout_constraintStart_toStartOf="@+id/v_guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/dcImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="110dp"
+                android:src="@drawable/dc"
+                app:layout_constraintEnd_toStartOf="@+id/gdImage"
+                app:layout_constraintStart_toEndOf="@+id/muImage"
+                app:layout_constraintTop_toBottomOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/gdImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="110dp"
+                android:src="@drawable/gd"
+                app:layout_constraintEnd_toStartOf="@+id/v_guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/phoImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="212dp"
+                android:src="@drawable/pho"
+                app:layout_constraintStart_toStartOf="@+id/v_guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/vhoImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="212dp"
+                android:src="@drawable/vdo"
+                app:layout_constraintEnd_toStartOf="@+id/cmoImage"
+                app:layout_constraintStart_toEndOf="@+id/phoImage"
+                app:layout_constraintTop_toBottomOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/cmoImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="212dp"
+                android:src="@drawable/cmo"
+                app:layout_constraintEnd_toStartOf="@+id/v_guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/h_guideline1" />
+
+            <ImageView
+                android:id="@+id/daImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="314dp"
+                android:src="@drawable/da"
+                app:layout_constraintStart_toStartOf="@+id/v_guideline1"
+                app:layout_constraintTop_toBottomOf="@+id/h_guideline1" />
+            <ImageView
+                android:id="@+id/erImage"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="314dp"
+                android:src="@drawable/er"
+                app:layout_constraintEnd_toStartOf="@+id/cmoImage"
+                app:layout_constraintStart_toEndOf="@+id/daImage"
+                app:layout_constraintTop_toBottomOf="@+id/h_guideline1" />
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
